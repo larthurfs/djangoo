@@ -1,0 +1,166 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+.container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+.header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+.header-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+.banner {
+            width: 500px;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+.navbar {
+            background-color: #063970;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+.navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+.navbar li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+.navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+.tool {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+.tool img {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+.tool-content {
+            flex: 1;
+        }
+
+.tool-title a {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color:#063970;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+.tool-description a {
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
+        }
+
+.separator {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+
+.forms input {
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.forms label {
+
+  color: #063970;
+}
+
+.forms button {
+
+  padding: 8px 20px;
+  background-color: #063970;;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.forms button:hover {
+  background-color: #23527c;
+}
+
+
+}
+
+.recibo-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Duas colunas com largura igual */
+  grid-gap: 10px;  /* Espaçamento entre os campos */
+}
+
+.recibo-form label {
+  display: block;
+  margin-bottom: 3px;
+  color: #063970;
+}
+
+.recibo-form input {
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.recibo-form button {
+  grid-column: span 2;  /* Botão ocupa duas colunas */
+  padding: 10px 20px;
+  background-color: #063970;;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.recibo-form button:hover {
+  background-color: #23527c;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f2f2f2;
+margin: 0;
+padding: 0;
+}
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+{% include 'message.html' %}
+
+<div class="tool-title"> <a href="{% url 'ferramenta_youtube' %}">Download de Vídeo do YouTube</a></div>
+<div class="separator"></div>
+
+<form method="POST" action="{% url 'ferramenta_youtube' %}" class="forms">
+  {% csrf_token %}
+  <input type="text" name="url" placeholder="Insira a URL do vídeo para download" required>
+  <button type="submit">Download</button>
+</form>
+
+
+
+{% endblock %}

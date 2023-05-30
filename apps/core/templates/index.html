@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+        {% if youtube.ativa %}
+        <div class="separator"></div>
+        <div class="tool">
+            <a href="{% url 'ferramenta_converter_pdf_para_word' %}"><img src="{% static 'img/youtube.png' %}" alt="Conversor de PDF para Word"></a>
+            <div class="tool-content">
+                <div class="tool-title"> <a href="{% url 'ferramenta_converter_pdf_para_word' %}">Conversor de PDF para Word</a></div>
+                <div class="tool-description"> <a href="{% url 'ferramenta_converter_pdf_para_word' %}">Uma ferramenta para converter seu arquivo pdf em word.</a></div>
+            </div>
+        </div>
+        {% endif %}
+        {% if youtube.ativa %}
+        <div class="separator"></div>
+        <div class="tool">
+            <a href="{% url 'ferramenta_youtube' %}"><img src="{% static 'img/youtube.png' %}" alt="Download de Vídeo do YouTube"></a>
+            <div class="tool-content">
+                <div class="tool-title"> <a href="{% url 'ferramenta_youtube' %}">Download de Vídeo do YouTube</a></div>
+                <div class="tool-description"> <a href="{% url 'ferramenta_youtube' %}">Uma ferramenta para baixar vídeos do YouTube para o seu dispositivo.</a></div>
+            </div>
+        </div>
+        {% endif %}
+        {% if qrcode.ativa %}
+        <div class="separator"></div>
+
+        <div class="tool">
+            <a href="{% url 'ferramenta_qrcode' %}"><img src="{% static 'img/qr-code.png' %}" alt="Criador de QR Code"></a>
+            <div class="tool-content">
+                <div class="tool-title"><a href="{% url 'ferramenta_qrcode' %}">Gerador de QR Code</a></div>
+                <div class="tool-description"><a href="{% url 'ferramenta_qrcode' %}">Crie facilmente QR codes para compartilhar informações.</a></div>
+            </div>
+        </div>
+        {% endif %}
+        {% if recibo.ativa %}
+
+        <div class="separator"></div>
+
+        <div class="tool">
+            <a href="{% url 'ferramenta_recibos' %}"><img src="{% static 'img/recibo.png' %}" alt="Gerador de Recibo"></a>
+            <div class="tool-content">
+                <div class="tool-title"><a href="{% url 'ferramenta_recibos' %}">Gerador de Recibo</a></div>
+                <div class="tool-description"><a href="{% url 'ferramenta_recibos' %}">Gere recibos para suas transações comerciais.</a></div>
+            </div>
+        </div>
+        {% endif %}
+        {% if senha.ativa %}
+
+        <div class="separator"></div>
+
+        <div class="tool">
+            <a href="{% url 'ferramenta_senha' %}"><img src="{% static 'img/senha.png' %}" alt="Gerador de Senha"></a>
+            <div class="tool-content">
+                <div class="tool-title"><a href="{% url 'ferramenta_senha' %}">Gerador de Senha</a></div>
+                <div class="tool-description"><a href="{% url 'ferramenta_senha' %}">Crie senhas seguras e aleatórias com diferentes combinações de caracteres, números e símbolos para aumentar a segurança das suas contas e dados.</a></div>
+            </div>
+        </div>
+        {% endif %}
+        {% if numeros.ativa %}
+
+        <div class="separator"></div>
+
+        <div class="tool">
+            <a href="{% url 'ferramenta_numeros' %}"><img src="{% static 'img/numeros.png' %}" alt="Números Aleatórios"></a>
+            <div class="tool-content">
+                <div class="tool-title"><a href="{% url 'ferramenta_numeros' %}">Números Aleatórios</a></div>
+                <div class="tool-description"><a href="{% url 'ferramenta_numeros' %}">Gere números aleatórios com total imprevisibilidade, sendo ideal para sorteios, simulações e jogos.</a></div>
+            </div>
+        </div>
+        {% endif %}
+{% endblock %}

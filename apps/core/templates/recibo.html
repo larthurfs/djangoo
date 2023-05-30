@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<div class="tool-title"> <a href="{% url 'ferramenta_recibos' %}">Gerador de Recibo</a></div>
+<div class="separator"></div>
+
+<form method="POST" action="{% url 'ferramenta_recibos' %}"  class="recibo-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Gerar Recibo</button>
+</form>
+<p>{{ senha_gerada }}</p>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+{% include 'message.html' %}
+
+<div class="tool-title"> <a href="{% url 'ferramenta_youtube' %}">Conversor de PDF para Word</a></div>
+<div class="separator"></div>
+
+<form method="POST" action="{% url 'ferramenta_converter_pdf_para_word' %}" class="forms" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" name="arquivo_pdf" class="form-control-file" required>
+  <button type="submit">Converter</button>
+</form>
+
+
+
+{% endblock %}

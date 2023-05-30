@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<div class="tool-title"> <a href="{% url 'ferramenta_numeros' %}">Gerador de Números</a></div>
+<div class="separator"></div>
+
+<form method="POST" action="{% url 'ferramenta_numeros' %}" class="forms">
+  {% csrf_token %}
+   <label for="qtdnumeros">Quantidade de números:</label><br>
+  <input type="text" pattern="\d+" name="qtdnumeros" id="qtdnumeros" placeholder="Quantidade de números" required><br>
+  <br>
+  <label for="ninicio">Número Início:</label><br>
+  <input type="text" pattern="\d+" name="ninicio" id="ninicio" placeholder="Número Início" required><br>
+  <br>
+  <label for="nfim">Número Fim:</label><br>
+  <input type="text" pattern="\d+" name="nfim" id="nfim" placeholder="Número Fim" required><br>
+  <br>
+  <button type="submit">Gerar Números</button>
+</form>
+<p>{{ numeros_gerados }}</p>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<div class="tool-title"> <a href="{% url 'ferramenta_qrcode' %}">Gerador de Senha</a></div>
+<div class="separator"></div>
+
+<form method="POST" action="{% url 'ferramenta_senha' %}" class="forms">
+  {% csrf_token %}
+  <input type="text" name="qtdcaracter" pattern="\d+" placeholder="Insira a quantidade de caracteres desejados - Informe um número inteiro" required>
+  <button type="submit">Gerar Senha</button>
+</form>
+<p>{{ senha_gerada }}</p>
+
+
+{% endblock %}

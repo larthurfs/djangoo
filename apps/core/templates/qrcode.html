@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<div class="tool-title"> <a href="{% url 'ferramenta_qrcode' %}">Gerador de QR Code</a></div>
+<div class="separator"></div>
+
+<form method="POST" action="{% url 'ferramenta_qrcode' %}" class="forms">
+  {% csrf_token %}
+  <input type="text" name="urlqrcode" placeholder="Insira a URL do QR Code">
+  <button type="submit">Gerar QR Code</button>
+</form>
+
+
+
+{% endblock %}
